@@ -2,7 +2,7 @@ var galleryUl = $(".gallery>ul");
 var menuUl = $(".menu>ul");
 $(menuUl).on("click", "li", function (e) {
     e.preventDefault();
-    let menuLi = e.currentTarget;
+    var menuLi = e.currentTarget;
     // let index=$(menuLi).index();
     // let width=$(galleryUl).width();
 
@@ -16,8 +16,8 @@ $(menuUl).on("click", "li", function (e) {
 
 });
 function toIndex(i) {
-    let width = $(galleryUl).width();
-    let menuLi = $(menuUl).children().eq(i);
+    var width = $(galleryUl).width();
+    var menuLi = $(menuUl).children().eq(i);
     $(menuLi).addClass("active");
     $(menuLi).siblings().removeClass("active");
 
@@ -28,7 +28,7 @@ function toIndex(i) {
 var aim = 0;
 
 setInterval(function () {
-    let menuUlChildren = $(menuUl).children();
+    var menuUlChildren = $(menuUl).children();
     for (var i = 0; i < menuUlChildren.length; i++) {
         if ($(menuUlChildren[i]).attr("class") === "active") {
             aim = i;
